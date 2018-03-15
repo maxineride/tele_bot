@@ -17,7 +17,7 @@ def error(bot, update, error):
 
 if __name__ == "__main__":
     # Set these variable to the appropriate values
-    TOKEN = os.getenv('BOT_TOKEN')
+    TOKEN = str(os.getenv('BOT_TOKEN'))
     NAME = "desolate-hollows-39625"
 
     # Port is given by Heroku
