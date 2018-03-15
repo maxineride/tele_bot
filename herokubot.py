@@ -11,8 +11,8 @@ def start(bot, update):
 def echo(bot, update):
     update.effective_message.reply_text(update.effective_message.text)
 
-def error(bot, update, error):
-    logger.warning('Update "%d" caused error "%s"' % (update, error))
+def errors(bot, update, error):
+    logger.warning('Update "%s" caused error "%s"' % (update, error))
 
 def post_rules(bot, update):
     update.effective_message.reply_text("RULES")
@@ -37,7 +37,7 @@ if __name__ == "__main__":
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(MessageHandler(Filters.text, echo))
     dp.add_handler(CommandHandler('rules', post_rules))
-    dp.add_handler(error)
+    dp.add_handler(errors)
 
     # Start the webhook
     updater.start_webhook(listen="0.0.0.0",
