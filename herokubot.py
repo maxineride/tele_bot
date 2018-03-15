@@ -37,7 +37,7 @@ if __name__ == "__main__":
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(MessageHandler(Filters.text, echo))
     dp.add_handler(CommandHandler('rules', post_rules))
-    dp.add_handler(errors)
+    dp.add_error_handler(errors)
 
     # Start the webhook
     updater.start_webhook(listen="0.0.0.0",
