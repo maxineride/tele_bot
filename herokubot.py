@@ -14,6 +14,8 @@ def echo(bot, update):
 def error(bot, update, error):
     logger.warning('Update "%s" caused error "%s"', update, error)
 
+def post_rules(bot, update):
+    update.effective_message.reply_text("RULES")
 
 if __name__ == "__main__":
     # Set these variable to the appropriate values
@@ -34,6 +36,7 @@ if __name__ == "__main__":
     # Add handlers
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(MessageHandler(Filters.text, echo))
+    dp.add_handler(CommandHandler('rules', post_rules))
     #dp.add_handler(error)
 
     # Start the webhook
