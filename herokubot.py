@@ -4,7 +4,7 @@ import os
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 # Resolve message data to a readable name  taken from https://github.com/Whalepool/Natalia/blob/master/natalia.py
-        
+
 def get_name(update):
         try:
             name = update.message.from_user.first_name
@@ -32,7 +32,7 @@ def post_rules(bot, update):
     chat_id = update.message.chat.id
     name = get_name(update)
     BOT_NAME = bot.username
-    if update.message._new_chat_member.username == BOT_NAME:
+    if update.message.new_chat_member.username == BOT_NAME:
         return False
     else:
         pprint('Room: '+str(chat_id))
