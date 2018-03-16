@@ -3,6 +3,19 @@ import os
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
+# Resolve message data to a readable name  taken from https://github.com/Whalepool/Natalia/blob/master/natalia.py
+        
+def get_name(update):
+        try:
+            name = update.message.from_user.first_name
+        except (NameError, AttributeError):
+            try:
+                name = update.message.from_user.username
+            except (NameError, AttributeError):
+                logger.info("No username or first name.. wtf")
+                return  ""
+        return name
+
 def start(bot, update):
     update.effective_message.reply_text("Hi!")
 
