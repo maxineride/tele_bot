@@ -36,7 +36,7 @@ def post_rules(bot, update):
     new_chat_mem = update.message.new_chat_members
 
     for member in new_chat_mem:
-        pprint(member)
+        pprint(member.username)
 
 
     BOT_NAME = bot.username
