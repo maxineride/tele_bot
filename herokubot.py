@@ -36,7 +36,7 @@ if __name__ == "__main__":
     # Add handlers
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(MessageHandler(Filters.text, echo))
-    dp.add_handler(MessageHandler(Filters.new_chat_members, post_rules))
+    dp.add_handler(MessageHandler(Filters.status_update.new_chat_members, post_rules))
     dp.add_handler(CommandHandler('rules', post_rules))
     dp.add_error_handler(errors)
 
