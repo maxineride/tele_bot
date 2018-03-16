@@ -15,6 +15,7 @@ def errors(bot, update, error):
     logger.warning('Update "%s" caused error "%s"' % (str(update), error))
 
 def post_rules(bot, update):
+    update.effective_message.reply_text(bot,update)
     update.effective_message.reply_text("RULES")
 
 if __name__ == "__main__":
