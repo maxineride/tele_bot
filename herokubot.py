@@ -31,14 +31,21 @@ def post_rules(bot, update):
     user_id = update.message.from_user.id
     message_id = update.message.message_id
     chat_id = update.message.chat.id
+    chat_name = update.message.chat.title
     name = get_name(update)
+    new_chat_mem = update.message.new_chat_members
+
+    for member in new_chat_mem:
+        pprint(member)
+    
+
     BOT_NAME = bot.username
     
-    pprint('Room: '+str(chat_id))
+    pprint('Room: '+str(chat_name))
     pprint('Chat_id: '+str(chat_id))
 
     logger.info("welcoming = "+name)
-    msg = ("Welcome to "+ str(chat_id) + " %s" % (name))
+    msg = ("Welcome to "+ str(chat_name) + " %s" % (name))
 
     message = bot.sendMessage(chat_id=user_id, text=msg)
 
