@@ -15,7 +15,8 @@ def errors(bot, update, error):
     logger.warning('Update "%s" caused error "%s"' % (str(update), error))
 
 def post_rules(bot, update):
-    update.effective_message.reply_text(bot,update)
+    for user in update['new_chat_members']:
+        bot.send_message(chat_id=user, text="Rules2")
     update.effective_message.reply_text("RULES")
 
 if __name__ == "__main__":
