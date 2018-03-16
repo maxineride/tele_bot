@@ -35,7 +35,7 @@ def post_rules(bot, update):
     name = get_name(update)
     new_chat_mem = update.message.new_chat_members
 
-    for member in itr(new_chat_mem):
+    for member in new_chat_members['user_id']:
         pprint(member)
 
 
