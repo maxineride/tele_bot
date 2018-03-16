@@ -33,11 +33,11 @@ def post_rules(bot, update):
     chat_id = update.message.chat.id
     chat_name = update.message.chat.title
     name = get_name(update)
-    new_chat_mem = update.message.new_chat_members
+    new_chat_mem = update.message.new_chat_members.
 
-    for member in new_chat_mem:
+    for member in itr(new_chat_mem):
         pprint(member)
-    
+
 
     BOT_NAME = bot.username
     
