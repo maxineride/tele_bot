@@ -38,7 +38,7 @@ def post_rules(bot, update):
     pprint('Chat_id: '+str(chat_id))
 
     logger.info("welcoming = "+name)
-    msg = ("Welcome to "+ str(chat_id) % (name))
+    msg = ("Welcome to "+ str(chat_id) + " %s" % (name))
 
     message = bot.sendMessage(chat_id=user_id, text=msg)
 
