@@ -3,8 +3,6 @@ import os
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
-BOT_NAME = bot.username
-
 def start(bot, update):
     update.effective_message.reply_text("Hi!")
 
@@ -20,6 +18,7 @@ def post_rules(bot, update):
     message_id = update.message.message_id
     chat_id = update.message.chat.id
     name = get_name(update)
+    BOT_NAME = bot.username
     if update.message._new_chat_member.username == BOT_NAME:
         return False
     else:
