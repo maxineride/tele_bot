@@ -3,6 +3,7 @@ import os
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
+BOT_NAME = bot.username
 
 def start(bot, update):
     update.effective_message.reply_text("Hi!")
@@ -15,8 +16,20 @@ def errors(bot, update, error):
     logger.warning('Update "%s" caused error "%s"' % (str(update), error))
 
 def post_rules(bot, update):
-    new_users = update['new_chat_members']
-    update.effective_message.reply_text(str(new_users))
+    user_id = update.message.from_user.id
+    message_id = update.message.message_id
+    chat_id = update.message.chat.id
+    name = get_name(update)
+    if update.message._new_chat_member.username == BOT_NAME:
+        return False
+    else:
+        pprint('Room: '+str(chat_id))
+        pprint('Chat_id: '+str(chat_id))
+
+        logger.info("welcoming = "+name)
+        msg = ("Welcome to "+ str(chat_id) % (name))
+
+        message = bot.sendMessage(chat_id=user_id, text=msg)
 
 if __name__ == "__main__":
     # Set these variable to the appropriate values
