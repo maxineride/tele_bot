@@ -32,16 +32,14 @@ def post_rules(bot, update):
     chat_id = update.message.chat.id
     name = get_name(update)
     BOT_NAME = bot.username
-    if update.message.new_chat_member.username == BOT_NAME:
-        return False
-    else:
-        pprint('Room: '+str(chat_id))
-        pprint('Chat_id: '+str(chat_id))
+    
+    pprint('Room: '+str(chat_id))
+    pprint('Chat_id: '+str(chat_id))
 
-        logger.info("welcoming = "+name)
-        msg = ("Welcome to "+ str(chat_id) % (name))
+    logger.info("welcoming = "+name)
+    msg = ("Welcome to "+ str(chat_id) % (name))
 
-        message = bot.sendMessage(chat_id=user_id, text=msg)
+    message = bot.sendMessage(chat_id=user_id, text=msg)
 
 if __name__ == "__main__":
     # Set these variable to the appropriate values
