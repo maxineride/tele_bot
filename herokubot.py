@@ -44,7 +44,7 @@ def new_post_rules(bot, update):
         else:
             logger.info("welcoming = "+name)
             msg = ("Welcome to "+ str(chat_name) + " %s" +'\n' + rule_list % (member.name))
-            message = bot.sendMessage(chat_id=chat_id, text=msg)
+            message = bot.sendMessage(chat_id=chat_id, text=msg, parse_mode=telegram.ParseMode.MARKDOWN)
  
     pprint('Room: '+str(chat_name))
     pprint('Chat_id: '+str(chat_id))
@@ -62,7 +62,7 @@ def post_rules(bot, update):
 
     logger.info("printing rules manually")
     msg =("Welcome to "+ str(chat_name) + str(rules_list))
-    bot.sendMessage(chat_id=chat_id, text=msg)
+    bot.sendMessage(chat_id=chat_id, text=msg, parse_mode=telegram.ParseMode.MARKDOWN)
 
     pprint('Room: '+str(chat_name))
     pprint('Chat_id: '+str(chat_id))
@@ -76,9 +76,34 @@ if __name__ == "__main__":
     NAME = str(os.getenv('BOT_H_NAME'))
 
     ### SET RULES HERE" 
-    rules_list ='''
-    1. This is a Rule 1
-    2. this is a rule 2'''
+    rules_list ='''Hum Furs SFW Chat Rules
+*  **SFW and NSFW telegram chats are for ALL Hum Fur members.**
+*  Be respectful of others. 
+*  Respect others desires to not be a part of a conversation or topic.
+*  Gossiping will not be tolerated in any connection to our group or the furry community.
+*  Express any concerns you may have, regarding others, to Farrin (Melissa) and/or Tokala (Mike).
+*  Avoid doing or saying anything that would intentionally bother or offend other members.
+*  Bullying of any kind will not be tolerated within the community.
+*  Do not solicit minors with or for any sexual topics or content.
+*  No NSFW chats or topics with minors or in the SFW chat.
+*  Sexual harassment will NOT be tolerated.
+*  Keep conversions and topics furry related within the Hum Fur Chats.
+*  **This community is a place of safety and security. We would like ALL of our members to feel safe and secure within the community.**
+*  Please feel free to contact Farrin (Melissa), Tokala (Mike), or Heather (Cute) with any questions or concerns you may have.
+*  **Rules may be added as needed**
+
+
+Hum Furs NSFW Chat Rules
+*  NSFW chats/topics/events/content is +18 only.
+*  Unsolicited messages, images, or content of a sexual nature will be considered sexual harassment. Farrin (Melissa) and/or Tokala (Mike) will assess the situation and handle it.
+*  **Rules may be added as needed**
+
+
+Hum Furs Meet-Up Chat Rules
+*  NSFW chats/topics/events/content is +18 only. 
+*  Explicitly state if your created Meet-up is +18 only or has other/different restrictions or rules.
+*  Meet-up telegram chat will be limited to local and visiting furs.
+*  **Rules may be added as needed**'''
     
 
     # Port is given by Heroku
