@@ -7,12 +7,10 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 # Resolve message data to a readable name  taken from https://github.com/Whalepool/Natalia/blob/master/natalia.py
 
 ### SET RULES HERE" 
-rule_list = '''
+rule_list ="""
 1. This is a Rule 1
 2. this is a rule 2
-
-''' 
-
+"""
 def get_name(update):
         try:
             name = update.message.from_user.first_name
@@ -67,8 +65,8 @@ def post_rules(bot, update):
     BOT_NAME = bot.username
 
 
-    logger.info("welcoming = "+name)
-    msg = rules_list
+    logger.info("printing rules manually")
+    msg = str(rules_list)
     bot.sendMessage(chat_id=chat_id, text=msg)
 
     pprint('Room: '+str(chat_name))
