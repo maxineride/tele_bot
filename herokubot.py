@@ -6,11 +6,6 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 # Resolve message data to a readable name  taken from https://github.com/Whalepool/Natalia/blob/master/natalia.py
 
-### SET RULES HERE" 
-rule_list ="""
-1. This is a Rule 1
-2. this is a rule 2
-"""
 def get_name(update):
         try:
             name = update.message.from_user.first_name
@@ -79,6 +74,12 @@ if __name__ == "__main__":
     # Set these variable to the appropriate values
     TOKEN = str(os.getenv('BOT_TOKEN'))
     NAME = str(os.getenv('BOT_H_NAME'))
+
+    ### SET RULES HERE" 
+    rule_list ="""
+    1. This is a Rule 1
+    2. this is a rule 2
+    """
 
     # Port is given by Heroku
     PORT = os.environ.get('PORT')
