@@ -45,9 +45,7 @@ def post_rules(bot, update):
             logger.info("welcoming = "+name)
             msg = ("Welcome to "+ str(chat_name) + " %s" % (member.name))
             message = bot.sendMessage(chat_id=chat_id, text=msg)
-
-    
-    
+ 
     pprint('Room: '+str(chat_name))
     pprint('Chat_id: '+str(chat_id))
 
@@ -56,7 +54,7 @@ def post_rules(bot, update):
 if __name__ == "__main__":
     # Set these variable to the appropriate values
     TOKEN = str(os.getenv('BOT_TOKEN'))
-    NAME = "desolate-hollows-39625"
+    NAME = str(os.getenv('BOT_H_NAME'))
 
     # Port is given by Heroku
     PORT = os.environ.get('PORT')
@@ -73,7 +71,6 @@ if __name__ == "__main__":
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(MessageHandler(Filters.text, echo))
     dp.add_handler(MessageHandler(Filters.status_update.new_chat_members, post_rules))
-    dp.add_handler(CommandHandler('rules', post_rules))
     dp.add_error_handler(errors)
 
     # Start the webhook

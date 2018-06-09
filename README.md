@@ -1,5 +1,12 @@
 # [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot/) on [Heroku](https://www.heroku.com/)
 
+## THIS IS A MODIFIED CLONE OF THE ORIGINAL REPO 
+Notes: 
+* herokubot.py Utilizes "Config Variables" from Heroku to handle the following
+** BOT_TOKEN (This is the token from @BotFather)
+** BOT_H_NAME (This is the Name of the dyno running the bot found under settings)
+
+
 So you want to deploy a python-telegram-bot on Heroku?
 
 In this repository you'll find a skeleton for an app on Heroku using the python-telegram-bot library.
@@ -16,6 +23,7 @@ Things you need:
 ```
 $ heroku create <appname>
 ```
+
 
 Fill these in in the right place in the script you're using.
 
