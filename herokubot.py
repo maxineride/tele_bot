@@ -76,10 +76,10 @@ if __name__ == "__main__":
     NAME = str(os.getenv('BOT_H_NAME'))
 
     ### SET RULES HERE" 
-    rule_list ="""
-    1. This is a Rule 1
-    2. this is a rule 2
-    """
+    rules_list ='''
+                1. This is a Rule 1
+                2. this is a rule 2'''
+    
 
     # Port is given by Heroku
     PORT = os.environ.get('PORT')
