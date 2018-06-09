@@ -69,7 +69,7 @@ def post_rules(bot, update):
 
     logger.info("welcoming = "+name)
     msg = rules_list
-    message = bot.sendMessage(chat_id=chat_id, text=msg)
+    bot.sendMessage(chat_id=chat_id, text=msg)
 
     pprint('Room: '+str(chat_name))
     pprint('Chat_id: '+str(chat_id))
