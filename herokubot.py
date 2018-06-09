@@ -61,7 +61,7 @@ def post_rules(bot, update):
 
 
     logger.info("printing rules manually")
-    msg = str(rules_list)
+    msg =("Welcome to "+ str(chat_name) + '\n' + str(rules_list))
     bot.sendMessage(chat_id=chat_id, text=msg)
 
     pprint('Room: '+str(chat_name))
@@ -77,8 +77,8 @@ if __name__ == "__main__":
 
     ### SET RULES HERE" 
     rules_list ='''
-                1. This is a Rule 1
-                2. this is a rule 2'''
+    1. This is a Rule 1
+    2. this is a rule 2'''
     
 
     # Port is given by Heroku
