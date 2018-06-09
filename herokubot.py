@@ -56,7 +56,7 @@ def new_post_rules(bot, update):
     pprint('Room: '+str(chat_name))
     pprint('Chat_id: '+str(chat_id))
 
-def post_rules(bot, update):
+#def post_rules(bot, update):
 
 
 
