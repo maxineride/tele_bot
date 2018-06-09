@@ -3,6 +3,7 @@ import os
 from pprint import pprint
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
 
 # Resolve message data to a readable name  taken from https://github.com/Whalepool/Natalia/blob/master/natalia.py
 
@@ -44,7 +45,7 @@ def new_post_rules(bot, update):
         else:
             logger.info("welcoming = "+name)
             msg = ("Welcome to "+ str(chat_name) + " %s" +'\n' + rule_list % (member.name))
-            message = bot.sendMessage(chat_id=chat_id, text=msg, parse_mode=ParseMode.MARKDOWN)
+            message = bot.sendMessage(chat_id=chat_id, text=msg, parse_mode=telegram.ParseMode.MARKDOWN)
  
     pprint('Room: '+str(chat_name))
     pprint('Chat_id: '+str(chat_id))
@@ -62,7 +63,7 @@ def post_rules(bot, update):
 
     logger.info("printing rules manually")
     msg =("Welcome to "+ str(chat_name) + str(rules_list))
-    bot.sendMessage(chat_id=chat_id, text=msg, parse_mode=MARKDOWN)
+    bot.sendMessage(chat_id=chat_id, text=msg, parse_mode=telegram.ParseMode.MARKDOWN)
 
     pprint('Room: '+str(chat_name))
     pprint('Chat_id: '+str(chat_id))
