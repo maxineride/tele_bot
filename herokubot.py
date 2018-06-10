@@ -44,7 +44,7 @@ def new_post_rules(bot, update):
             return False
         else:
             logger.info("welcoming = "+name)
-            msg = ("Welcome to "+ str(chat_name) + " %s" +'\n' + rule_list % (member.name))
+            msg = ("Welcome to "+ str(chat_name) + " %s" +'\n' + str(rules_list) % (member.name))
             message = bot.sendMessage(chat_id=chat_id, text=msg, parse_mode='MARKDOWN')
  
     pprint('Room: '+str(chat_name))
