@@ -62,7 +62,8 @@ def post_rules(bot, update):
 
 
     logger.info("printing rules manually")
-    msg =("Welcome to "+ str(chat_name) + '\n' +  str(rules_list))
+    msg = ("Welcome to "+ str(chat_name) + " %s" +"\n" % (member.name)) + str(rules_list)
+    #msg =("Welcome to "+ str(chat_name) + '\n' +  str(rules_list))
     bot.sendMessage(chat_id=chat_id, text=msg, parse_mode='MARKDOWN')
 
     pprint('Room: '+str(chat_name))
