@@ -78,7 +78,7 @@ if __name__ == "__main__":
 
     ### SET RULES HERE" 
     rules_list ='''*General Hum Furs Chat rules*
-•Be respectful of others.
+•Be respectful of others!
 •Respect others desires to not be a part of a conversation or topic.
 •Gossiping will not be tolerated in any connection to our group or the furry community.
 •Express any concerns you may have, regarding others, to Farrin (Melissa), Tokala (Mike), and/or Benji (John).
@@ -94,19 +94,20 @@ if __name__ == "__main__":
 •Rules may be added as needed
  
 *Hum Furs SFW chat rules*
-•SFW and NSFW telegram chats are for ALL Hum Fur members.
+•This chat is for age +16 years old.
+•This chat is for Hum Fur members.
 •No NSFW chats or topics with minors or in the SFW chat.
  
  
 *Hum Furs NSFW Chat Rules*
-•SFW and NSFW telegram chats are for ALL Hum Fur members.
+•This chat is for Hum Fur members.
 •NSFW chats/topics/events/content is +18 only.
 •Do not post content of controversial topics.
  
  
 *Hum Furs Meet-Up Chat Rules*
+•This chat is for age +16 years old.
 •Meet-up telegram chat will be limited to local and visiting furs.
-•NSFW chats/topics/events/content is +18 only.
 •Explicitly state if your created Meet-up is +18 only or has other/different restrictions or rules.'''
     
 
