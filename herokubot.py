@@ -81,7 +81,7 @@ if __name__ == "__main__":
 •Be respectful of others!
 •Respect others desires to not be a part of a conversation or topic.
 •Gossiping will not be tolerated in any connection to our group or the furry community.
-•Express any concerns you may have, regarding others, to Farrin (Melissa), Tokala (Mike), and/or Benji (John).
+•Express any concerns you may have, regarding others, to Farrin, Tokala, and/or Benji.
 •Avoid doing or saying anything that would intentionally bother or offend other members.
 •Bullying of any kind will not be tolerated within the community.
 •Do not solicit minors with or for any sexual topics or content.
@@ -89,8 +89,9 @@ if __name__ == "__main__":
 •Sexual harassment will NOT be tolerated.
 •Keep conversions and topics furry related within the Hum Fur Chats.
 •This community is a place of safety and security. We would like ALL of our members to feel safe and secure within the community.
-•Please feel free to contact Farrin (Melissa), Tokala (Mike), and/or Benji (John) with any questions or concerns you may have.
-•Unsolicited messages, images, or content of a sexual nature within chats, will be considered sexual harassment. Farrin (Melissa), Tokala (Mike), and/or Benji (John) will assess the situation and handle it.
+•Please feel free to contact Farrin, Tokala, and/or Benji with any questions or concerns you may have.
+•Unsolicited messages, images, or content of a sexual nature within chats, will be considered sexual harassment. Farrin, Tokala, and/or Benji will assess the situation and handle it.
+•Leaving one of the humfur telegram groups will create a cool-down period of at least 1 week to pass before attempting to rejoin any of the associated telegram groups.
 •Rules may be added as needed
  
 *Hum Furs SFW chat rules*
